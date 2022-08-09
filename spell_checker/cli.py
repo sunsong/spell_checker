@@ -21,7 +21,7 @@ def check_chinese():
         file_path = os.path.join(cwd, filename)
         chinese_exists, all_chinese = spell_checker.check_chinese(file_path)
         print("Found file containing Chinese: %s" % filename)
-        print(all_chinese)
+        print("".join(all_chinese))
         if chinese_exists:
             should_fail = True
 
