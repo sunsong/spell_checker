@@ -34,3 +34,7 @@ repos:
 ## Usage
 
 pre-commit hook will be triggered when commiting code using `git commit`
+
+## Reference
+
+* https://pre-commit.com/
