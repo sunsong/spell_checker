@@ -3,11 +3,9 @@
 A pre-commit hook to do spell checks.
 
 
-* Free software: MIT license
-
-
 ## Features
 
+* Free software: MIT license
 * Prevent non English characters from being commited to source code.
 
 ## TODO
