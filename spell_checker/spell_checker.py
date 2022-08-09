@@ -1,18 +1,19 @@
 """Main module."""
-import click
 
 
-def check_chinese():
-    all_chars = list("测试")
+def check_chinese(file_path):
+    all_chinese = []
+
+    with open(file_path) as file:
+        all_chars = list(file.read())
+
     chinese_exists = False
     for i in all_chars:
         if is_cjk(i):
-            print(i)
+            all_chinese.append(i)
             chinese_exists = True
 
-    if chinese_exists:
-        print("Chinese characters found")
-        exit(1)
+    return chinese_exists, all_chinese
 
 
 cjk_ranges = [

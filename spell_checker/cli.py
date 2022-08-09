@@ -1,4 +1,5 @@
 """Console script for spell_checker."""
+import os
 import sys
 import click
 from spell_checker import spell_checker
@@ -7,21 +8,26 @@ from spell_checker import spell_checker
 @click.command()
 @click.option('--check', help='Type of check to do.')
 def main(check):
-    if not check:
-        print("No task specified.")
+    pass
+
+
+def check_chinese():
+    cwd = os.getcwd()
+    changed_filenames = sys.argv[1:]
+    print(changed_filenames)
+
+    should_fail = False
+    for filename in changed_filenames
+        file_path = os.path.join(cwd, filename)
+        chinese_exists, all_chinese = spell_checker.check_chinese(file_path)
+        print("Found file containing Chinese: %s" % filename)
+        print(all_chinese)
+        if chinese_exists:
+            should_fail = True
+
+    if should_fail:
         exit(1)
-
-    if check.lower() == "chinese":
-        spell_checker.check_chinese()
-    return 0
-
-
-def check_chinese(*args, **kargs):
-    print(args)
-    print(kargs)
-    print(sys.argv)
-    spell_checker.check_chinese()
 
 
 if __name__ == "__main__":
-    sys.exit(main())  # pragma: no cover
+    sys.exit(main())
