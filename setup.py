@@ -31,7 +31,8 @@ setup(
     description="A pre-commit hook to do spell checks.",
     entry_points={
         'console_scripts': [
-            'spell_checker=spell_checker.cli:main',
+            'spell-checker=spell_checker.cli:main',
+            'spell-check-chinese=spell_checker.cli:check_chinese',
         ],
     },
     install_requires=requirements,

@@ -1,0 +1,6 @@
+-   id: check-chinese
+    name: check for chinese characters
+    description: prevents chinese characters from being committed.
+    entry: spell-check-chinese
+    language: python
+    stages: [commit, push, manual]
