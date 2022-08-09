@@ -16,6 +16,7 @@ def check_chinese(file_path):
     return chinese_exists, all_chinese
 
 
+# https://stackoverflow.com/questions/34587346/python-check-if-a-string-contains-chinese-character
 cjk_ranges = [
     ( 0x4E00,  0x62FF),
     ( 0x6300,  0x77FF),
