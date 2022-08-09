@@ -13,6 +13,8 @@ def main(check):
 
 def check_chinese():
     cwd = os.getcwd()
+    # pre-commit will trigger this script when git commit.
+    # When running this script, pre-commit pass all filenames of the changed files to be committed as arguments
     changed_filenames = sys.argv[1:]
 
     should_fail = False
